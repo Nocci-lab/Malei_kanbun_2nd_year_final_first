@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="高校2年・漢文期末テスト対策。疑問・反語（15〜19）の学習ゲームと、書き下し文・口語訳の解答PDFです。">
+  <meta name="theme-color" content="#18314f">
+  <title>漢文 期末テスト対策</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2318314f'/%3E%3Ctext x='32' y='45' text-anchor='middle' font-size='38' fill='%23fff' font-family='serif'%3E漢%3C/text%3E%3C/svg%3E">
+  <style>
+    :root {
+      --ink: #172434;
+      --navy: #18314f;
+      --navy-2: #254d70;
+      --paper: #fffdf7;
+      --cream: #f5efe3;
+      --gold: #c8943d;
+      --gold-soft: #f4dfad;
+      --teal: #397d78;
+      --rose: #a64d5b;
+      --muted: #657180;
+      --line: rgba(24, 49, 79, .14);
+      --shadow: 0 20px 55px rgba(24, 49, 79, .12);
+    }
+
+    * { box-sizing: border-box; }
+
+    html { min-height: 100%; }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 10% 12%, rgba(200, 148, 61, .14), transparent 25rem),
+        radial-gradient(circle at 90% 86%, rgba(57, 125, 120, .12), transparent 28rem),
+        var(--cream);
+      font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", "YuGothic", "Noto Sans JP", sans-serif;
+      line-height: 1.7;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: .28;
+      background-image:
+        linear-gradient(rgba(24, 49, 79, .035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(24, 49, 79, .035) 1px, transparent 1px);
+      background-size: 28px 28px;
+      mask-image: linear-gradient(to bottom, black, transparent 80%);
+    }
+
+    .page {
+      position: relative;
+      width: min(1080px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 56px 0 32px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 40px;
+      margin-bottom: 36px;
+      padding: clamp(28px, 5vw, 54px);
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, .52);
+      border-radius: 28px;
+      color: white;
+      background:
+        linear-gradient(125deg, rgba(255,255,255,.05), transparent 45%),
+        linear-gradient(135deg, var(--navy), #10263c 70%);
+      box-shadow: var(--shadow);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 0 10px;
+      color: var(--gold-soft);
+      font-size: .84rem;
+      font-weight: 700;
+      letter-spacing: .16em;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 30px;
+      height: 1px;
+      background: currentColor;
+    }
+
+    h1 {
+      margin: 0;
+      font-family: "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", serif;
+      font-size: clamp(2rem, 5vw, 4rem);
+      font-weight: 700;
+      line-height: 1.3;
+      letter-spacing: .06em;
+    }
+
+    .lead {
+      max-width: 37rem;
+      margin: 15px 0 0;
+      color: rgba(255,255,255,.78);
+      font-size: clamp(.95rem, 2vw, 1.08rem);
+    }
+
+    .seal {
+      display: grid;
+      place-items: center;
+      width: 116px;
+      aspect-ratio: 1;
+      border: 1px solid rgba(244, 223, 173, .55);
+      outline: 1px solid rgba(244, 223, 173, .25);
+      outline-offset: 7px;
+      color: var(--gold-soft);
+      font-family: "Yu Mincho", "YuMincho", serif;
+      font-size: 1.75rem;
+      font-weight: 700;
+      letter-spacing: .18em;
+      line-height: 1.2;
+      writing-mode: vertical-rl;
+    }
+
+    .section-title {
+      margin: 0 0 18px 4px;
+      color: var(--navy);
+      font-size: 1rem;
+      font-weight: 800;
+      letter-spacing: .1em;
+    }
+
+    .resources {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .card {
+      --accent: var(--teal);
+      position: relative;
+      display: flex;
+      min-height: 268px;
+      padding: clamp(25px, 4vw, 38px);
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      color: inherit;
+      background: rgba(255, 253, 247, .92);
+      box-shadow: 0 14px 36px rgba(24, 49, 79, .08);
+      text-decoration: none;
+      transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+    }
+
+    .card.pdf { --accent: var(--rose); }
+
+    .card::after {
+      content: "";
+      position: absolute;
+      right: -45px;
+      bottom: -60px;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      background: color-mix(in srgb, var(--accent) 9%, transparent);
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: color-mix(in srgb, var(--accent) 45%, transparent);
+      box-shadow: 0 22px 48px rgba(24, 49, 79, .14);
+    }
+
+    .card:focus-visible {
+      outline: 4px solid color-mix(in srgb, var(--accent) 30%, transparent);
+      outline-offset: 4px;
+    }
+
+    .card-inner {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .icon {
+      display: grid;
+      place-items: center;
+      width: 54px;
+      height: 54px;
+      margin-bottom: 24px;
+      border-radius: 15px;
+      color: white;
+      background: var(--accent);
+      box-shadow: 0 8px 20px color-mix(in srgb, var(--accent) 25%, transparent);
+    }
+
+    .icon svg {
+      width: 28px;
+      height: 28px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .tag {
+      margin: 0 0 4px;
+      color: var(--accent);
+      font-size: .76rem;
+      font-weight: 800;
+      letter-spacing: .14em;
+    }
+
+    .card h2 {
+      margin: 0;
+      color: var(--navy);
+      font-family: "Yu Mincho", "YuMincho", serif;
+      font-size: clamp(1.32rem, 3vw, 1.78rem);
+      line-height: 1.45;
+    }
+
+    .card p {
+      margin: 10px 0 22px;
+      color: var(--muted);
+      font-size: .93rem;
+    }
+
+    .action {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: auto;
+      color: var(--accent);
+      font-weight: 800;
+    }
+
+    .arrow {
+      transition: transform .2s ease;
+    }
+
+    .card:hover .arrow { transform: translateX(4px); }
+
+    .tip {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 24px 4px 0;
+      color: var(--muted);
+      font-size: .9rem;
+    }
+
+    .tip-number {
+      display: inline-grid;
+      flex: 0 0 auto;
+      place-items: center;
+      width: 29px;
+      height: 29px;
+      border: 1px solid rgba(200, 148, 61, .45);
+      border-radius: 50%;
+      color: #8b6224;
+      background: rgba(244, 223, 173, .35);
+      font-family: serif;
+      font-weight: 700;
+    }
+
+    footer {
+      padding: 40px 4px 0;
+      color: #7a8490;
+      font-size: .78rem;
+      text-align: center;
+      letter-spacing: .08em;
+    }
+
+    @media (max-width: 720px) {
+      .page {
+        width: min(100% - 22px, 620px);
+        padding-top: 18px;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        border-radius: 22px;
+      }
+
+      .seal {
+        width: 100%;
+        height: 48px;
+        aspect-ratio: auto;
+        outline: none;
+        font-size: 1rem;
+        letter-spacing: .3em;
+        writing-mode: horizontal-tb;
+      }
+
+      .resources { grid-template-columns: 1fr; }
+
+      .card {
+        min-height: 244px;
+        border-radius: 20px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">高校二年・期末テスト対策</p>
+        <h1>漢文<br>疑問・反語 15〜19</h1>
+        <p class="lead">ゲームで繰り返し練習して、解答PDFで書き下し文と口語訳を確認しよう。</p>
+      </div>
+      <div class="seal" aria-hidden="true">学而時習</div>
+    </header>
+
+    <p class="section-title">学習メニュー</p>
+
+    <section class="resources" aria-label="漢文の学習教材">
+      <a class="card game" href="./kanbun_kimatsu_15-19.html">
+        <span class="card-inner">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M7 8h10a4 4 0 0 1 3.8 5.3l-1.2 3.5a2 2 0 0 1-3.2.9L14 16h-4l-2.4 1.7a2 2 0 0 1-3.2-.9l-1.2-3.5A4 4 0 0 1 7 8Z"/>
+              <path d="M8 11v4M6 13h4M16.5 11.5h.01M18 14h.01"/>
+            </svg>
+          </span>
+          <span class="tag">PRACTICE</span>
+          <h2>学習ゲームを始める</h2>
+          <p>読み・書き下し文・口語訳を、問題形式で楽しく練習できます。</p>
+          <span class="action">ゲームを開く <span class="arrow" aria-hidden="true">→</span></span>
+        </span>
+      </a>
+
+      <a class="card pdf" href="./漢文_期末対策_書き下し文と口語訳_答え.pdf" target="_blank" rel="noopener">
+        <span class="card-inner">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M6 2.8h8l4 4V21H6Z"/>
+              <path d="M14 2.8v4h4M8.5 12.5h7M8.5 16h5"/>
+            </svg>
+          </span>
+          <span class="tag">ANSWER BOOK</span>
+          <h2>解答PDFを見る</h2>
+          <p>プリント順の書き下し文・口語訳を、縦書き・振り仮名・返り点付きで確認できます。</p>
+          <span class="action">PDFを開く <span class="arrow" aria-hidden="true">↗</span></span>
+        </span>
+      </a>
+    </section>
+
+    <p class="tip"><span class="tip-number">一</span><span>まずゲームに挑戦し、迷ったところをPDFで復習するのがおすすめです。</span></p>
+
+    <footer>高校二年　漢文期末テスト対策</footer>
+  </main>
+</body>
+</html>
