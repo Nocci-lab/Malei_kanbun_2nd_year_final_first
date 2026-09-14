@@ -1,0 +1,1230 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="漢文ジャンプアップノート15〜19（疑問・反語）の期末テスト対策。縦書きの白文で、書き下し文・口語訳・用法・読みを練習できます。">
+  <title>漢文 期末対策｜疑問・反語 15〜19</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='13' fill='%231e3157'/%3E%3Cpath d='M18 14h28v7H35v8h9v7h-9v14h-7V36h-9v-7h9v-8H18z' fill='%23f3ca52'/%3E%3C/svg%3E">
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #17223a;
+      --muted: #65718a;
+      --navy: #1e3157;
+      --navy-2: #29446f;
+      --paper: #fffdf7;
+      --ground: #e9eef7;
+      --line: #d7dce7;
+      --gold: #f3ca52;
+      --gold-soft: #fff5c8;
+      --teal: #157c78;
+      --teal-soft: #e1f4f1;
+      --rose: #a94e65;
+      --rose-soft: #fdebf0;
+      --shadow: 0 18px 55px rgba(29, 46, 82, .14);
+    }
+
+    * { box-sizing: border-box; }
+
+    html { min-height: 100%; background: var(--ground); }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 88% 4%, rgba(243, 202, 82, .22), transparent 25rem),
+        linear-gradient(135deg, #edf2fa 0%, #e6ebf4 100%);
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", "Noto Sans JP", sans-serif;
+      font-size: 16px;
+      line-height: 1.65;
+    }
+
+    button, select, textarea, input { font: inherit; }
+    button, select, input[type="checkbox"] { cursor: pointer; }
+
+    button:focus-visible, select:focus-visible, textarea:focus-visible, input:focus-visible,
+    summary:focus-visible {
+      outline: 3px solid rgba(21, 124, 120, .42);
+      outline-offset: 3px;
+    }
+
+    .app {
+      width: min(1420px, 100%);
+      margin: 0 auto;
+      padding: 20px clamp(14px, 3vw, 42px) 44px;
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 22px;
+      margin-bottom: 14px;
+    }
+
+    .brand { display: flex; align-items: center; gap: 13px; min-width: 0; }
+    .seal {
+      display: grid;
+      place-items: center;
+      width: 48px;
+      height: 48px;
+      flex: 0 0 48px;
+      border-radius: 15px;
+      color: var(--gold);
+      background: var(--navy);
+      font: 700 25px/1 "Yu Mincho", "Hiragino Mincho ProN", serif;
+      box-shadow: 0 8px 18px rgba(30, 49, 87, .22);
+    }
+    h1 { margin: 0; font-size: clamp(1.1rem, 2.3vw, 1.55rem); line-height: 1.25; letter-spacing: .05em; }
+    .subtitle { margin: 2px 0 0; color: var(--muted); font-size: .88rem; }
+
+    .score-chip {
+      min-width: 118px;
+      padding: 8px 13px;
+      border: 1px solid rgba(255,255,255,.72);
+      border-radius: 999px;
+      color: #fff;
+      background: var(--navy);
+      text-align: center;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .toolbar {
+      display: grid;
+      grid-template-columns: 1.35fr 1fr auto;
+      gap: 14px;
+      align-items: end;
+      margin-bottom: 14px;
+      padding: 13px 15px;
+      border: 1px solid rgba(255,255,255,.72);
+      border-radius: 18px;
+      background: rgba(255,255,255,.78);
+      box-shadow: 0 8px 30px rgba(29,46,82,.07);
+      backdrop-filter: blur(12px);
+    }
+    .control-label { display: block; margin-bottom: 6px; color: var(--muted); font-size: .78rem; font-weight: 800; letter-spacing: .08em; }
+    .unit-pills { display: flex; flex-wrap: wrap; gap: 7px; }
+    .unit-pill { position: relative; }
+    .unit-pill input { position: absolute; opacity: 0; pointer-events: none; }
+    .unit-pill span {
+      display: inline-flex;
+      align-items: center;
+      min-height: 38px;
+      padding: 6px 12px;
+      border: 1px solid var(--line);
+      border-radius: 11px;
+      background: #fff;
+      color: var(--navy);
+      font-weight: 800;
+      transition: .18s ease;
+    }
+    .unit-pill input:checked + span { color: #fff; border-color: var(--navy); background: var(--navy); box-shadow: 0 4px 12px rgba(30,49,87,.17); }
+    .unit-pill input:focus-visible + span { outline: 3px solid rgba(21,124,120,.42); outline-offset: 2px; }
+
+    .select-row { display: grid; grid-template-columns: 1fr .72fr; gap: 8px; }
+    select {
+      width: 100%;
+      min-height: 40px;
+      padding: 7px 32px 7px 11px;
+      border: 1px solid var(--line);
+      border-radius: 11px;
+      color: var(--ink);
+      background: #fff;
+    }
+
+    .primary, .secondary, .ghost, .choice, .rate-button {
+      border: 0;
+      border-radius: 12px;
+      font-weight: 800;
+      transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+    }
+    .primary:hover, .secondary:hover, .choice:hover, .rate-button:hover { transform: translateY(-1px); }
+    .primary {
+      min-height: 42px;
+      padding: 9px 18px;
+      color: #fff;
+      background: var(--teal);
+      box-shadow: 0 7px 18px rgba(21,124,120,.24);
+    }
+    .secondary { min-height: 42px; padding: 9px 17px; color: var(--navy); background: var(--gold); }
+    .ghost { padding: 7px 10px; color: var(--navy); background: transparent; border: 1px solid var(--line); }
+    button:disabled { cursor: not-allowed; opacity: .46; transform: none !important; box-shadow: none; }
+
+    .progress-wrap {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 14px;
+      color: var(--muted);
+      font-size: .86rem;
+      font-weight: 700;
+    }
+    .progress-track { height: 8px; overflow: hidden; border-radius: 99px; background: rgba(30,49,87,.12); }
+    .progress-bar { width: 0; height: 100%; border-radius: inherit; background: linear-gradient(90deg, var(--teal), #42a9a0); transition: width .35s ease; }
+
+    .exam-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(360px, .86fr);
+      gap: 18px;
+      min-height: 620px;
+    }
+
+    .answer-pane, .question-sheet {
+      border: 1px solid rgba(255,255,255,.74);
+      border-radius: 25px;
+      box-shadow: var(--shadow);
+    }
+
+    .answer-pane {
+      position: relative;
+      overflow: auto;
+      padding: clamp(20px, 3vw, 34px);
+      background: rgba(255,255,255,.92);
+    }
+    .answer-pane::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto;
+      height: 6px;
+      background: linear-gradient(90deg, var(--teal), var(--gold));
+    }
+
+    .eyebrow { margin: 0 0 8px; color: var(--teal); font-size: .78rem; font-weight: 900; letter-spacing: .13em; text-transform: uppercase; }
+    h2 { margin: 0; font-size: clamp(1.25rem, 2.4vw, 1.7rem); line-height: 1.35; }
+    .instruction { margin: 8px 0 20px; color: var(--muted); }
+    textarea {
+      width: 100%;
+      min-height: 155px;
+      resize: vertical;
+      padding: 16px;
+      border: 2px solid var(--line);
+      border-radius: 15px;
+      color: var(--ink);
+      background: #fbfcff;
+      line-height: 1.8;
+    }
+    textarea::placeholder { color: #929bb0; }
+    textarea:focus { border-color: var(--teal); outline: 3px solid rgba(21,124,120,.14); }
+    .choice-grid { display: grid; gap: 10px; }
+    .choice {
+      min-height: 52px;
+      padding: 11px 15px;
+      border: 1px solid var(--line);
+      color: var(--ink);
+      background: #fff;
+      text-align: left;
+    }
+    .choice:hover { border-color: var(--navy-2); background: #f7f9fd; }
+    .choice.correct { color: #07544f; border-color: var(--teal); background: var(--teal-soft); }
+    .choice.incorrect { color: #7a2940; border-color: var(--rose); background: var(--rose-soft); }
+
+    .action-row { display: flex; flex-wrap: wrap; align-items: center; gap: 9px; margin-top: 16px; }
+    .keyhint { margin-left: auto; color: var(--muted); font-size: .78rem; }
+
+    .explanation {
+      margin-top: 22px;
+      padding-top: 20px;
+      border-top: 1px dashed #bbc4d5;
+      animation: rise .24s ease both;
+    }
+    @keyframes rise { from { opacity: 0; transform: translateY(7px); } }
+    .judge-banner { margin: 0 0 14px; padding: 10px 13px; border-radius: 12px; font-weight: 800; }
+    .judge-banner.good { color: #07544f; background: var(--teal-soft); }
+    .judge-banner.retry { color: #7a2940; background: var(--rose-soft); }
+    .answer-card {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .answer-box { padding: 14px 15px; border: 1px solid var(--line); border-radius: 14px; background: #fbfcff; }
+    .answer-box h3, .point-box h3 { margin: 0 0 7px; color: var(--navy); font-size: .88rem; letter-spacing: .06em; }
+    .answer-box p { margin: 0; line-height: 1.85; }
+    ruby { ruby-position: over; }
+    rt { color: var(--rose); font-size: .55em; font-weight: 750; }
+    .kundoku-ruby { font-family: "Yu Mincho", "Hiragino Mincho ProN", "Noto Serif JP", serif; font-size: 1.06rem; }
+    .kunten-box {
+      display: grid;
+      grid-template-columns: minmax(210px, .72fr) 1fr;
+      gap: 16px;
+      align-items: center;
+      margin: 0 0 12px;
+      padding: 14px 15px;
+      border: 1px solid #cfd7e5;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #f9fbff, #fffdf5);
+    }
+    .kunten-box h3 { margin: 0 0 5px; color: var(--navy); font-size: .9rem; letter-spacing: .06em; }
+    .kunten-help { margin: 0; color: var(--muted); font-size: .78rem; line-height: 1.55; }
+    .kunten-badge {
+      display: inline-block;
+      margin-top: 7px;
+      padding: 2px 8px;
+      border-radius: 999px;
+      color: #5d4d10;
+      background: var(--gold-soft);
+      font-size: .75rem;
+      font-weight: 800;
+    }
+    .kunten-preview {
+      display: grid;
+      place-items: center;
+      min-height: 235px;
+      padding: 8px 22px;
+      border-left: 1px dashed #c9cfdb;
+      font-family: "Yu Mincho", "Hiragino Mincho ProN", "Noto Serif JP", serif;
+    }
+    .kunten-stack {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      font-size: 1.55rem;
+      line-height: 1;
+    }
+    .kunten-cell {
+      position: relative;
+      display: grid;
+      place-items: center;
+      width: 1.8em;
+      height: 1.48em;
+      flex: 0 0 auto;
+    }
+    .kunten-main { position: relative; z-index: 1; }
+    .kaeriten {
+      position: absolute;
+      left: -.05em;
+      bottom: -.05em;
+      color: var(--rose);
+      font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+      font-size: .46em;
+      font-weight: 800;
+      line-height: 1;
+    }
+    .point-box { margin-top: 12px; padding: 14px 15px; border-radius: 14px; background: var(--gold-soft); }
+    .point-box p { margin: 0; }
+    .pattern-tag { display: inline-block; margin-right: 7px; padding: 2px 8px; border-radius: 999px; color: #fff; background: var(--navy); font-size: .78rem; font-weight: 800; }
+    .rate-wrap { margin-top: 15px; padding: 13px; border: 1px solid var(--line); border-radius: 14px; }
+    .rate-wrap p { margin: 0 0 9px; font-size: .9rem; font-weight: 800; }
+    .rate-buttons { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+    .rate-button { min-height: 42px; padding: 8px; border: 1px solid var(--line); background: #fff; }
+    .rate-button[data-rate="correct"] { color: #07544f; }
+    .rate-button[data-rate="close"] { color: #785c00; }
+    .rate-button[data-rate="wrong"] { color: #7a2940; }
+
+    .question-sheet {
+      position: relative;
+      overflow: hidden;
+      min-height: 620px;
+      background:
+        linear-gradient(rgba(53,67,91,.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(53,67,91,.035) 1px, transparent 1px),
+        var(--paper);
+      background-size: 28px 28px;
+    }
+    .question-sheet::before {
+      content: "";
+      position: absolute;
+      inset: 16px;
+      border: 1px solid rgba(30,49,87,.19);
+      border-radius: 16px;
+      pointer-events: none;
+    }
+    .paper-stamp {
+      position: absolute;
+      right: 31px;
+      bottom: 28px;
+      z-index: 2;
+      width: 43px;
+      height: 43px;
+      display: grid;
+      place-items: center;
+      border: 2px solid var(--rose);
+      color: var(--rose);
+      font: 800 14px/1.05 serif;
+      letter-spacing: .03em;
+      transform: rotate(-5deg);
+      opacity: .78;
+    }
+    .vertical-stage {
+      position: absolute;
+      inset: 40px 38px 40px 34px;
+      display: block;
+      overflow-x: auto;
+      overflow-y: hidden;
+      writing-mode: vertical-rl;
+      text-orientation: upright;
+      font-family: "Yu Mincho", "Hiragino Mincho ProN", "Noto Serif JP", serif;
+    }
+    .q-number { color: var(--teal); font: 800 .9rem/1.7 -apple-system, BlinkMacSystemFont, "Yu Gothic", sans-serif; letter-spacing: .08em; }
+    .vertical-prompt { margin: 0 0 0 18px; font-size: 1.02rem; line-height: 2; letter-spacing: .08em; }
+    .kanbun {
+      margin: 0 18px;
+      font-size: clamp(1.85rem, 4vw, 2.65rem);
+      line-height: 1.75;
+      letter-spacing: .18em;
+      font-weight: 650;
+    }
+    .kanbun mark {
+      padding: 2px 1px;
+      color: inherit;
+      background: linear-gradient(90deg, transparent 7%, rgba(243,202,82,.78) 7%, rgba(243,202,82,.78) 92%, transparent 92%);
+      text-decoration: underline;
+      text-decoration-color: var(--rose);
+      text-underline-offset: 5px;
+    }
+    .context-vertical {
+      max-height: 100%;
+      margin-left: 16px;
+      padding-left: 12px;
+      border-left: 1px solid #c9b77b;
+      color: #536078;
+      font-size: .9rem;
+      line-height: 1.85;
+    }
+    .unit-label { color: var(--muted); font: 700 .78rem/1.6 -apple-system, BlinkMacSystemFont, "Yu Gothic", sans-serif; letter-spacing: .06em; }
+
+    .empty-state, .result-state {
+      height: 100%;
+      display: grid;
+      align-content: center;
+      text-align: center;
+    }
+    .empty-state .big, .result-score { color: var(--navy); font: 750 clamp(2.5rem, 8vw, 4.8rem)/1 "Yu Mincho", serif; }
+    .empty-state p { max-width: 34rem; margin: 14px auto 20px; color: var(--muted); }
+    .result-state h2 { margin-top: 10px; }
+    .result-message { color: var(--muted); }
+    .result-actions { display: flex; justify-content: center; flex-wrap: wrap; gap: 9px; margin-top: 18px; }
+    .review-list { margin: 20px 0 0; padding: 0; list-style: none; text-align: left; }
+    .review-list li { display: flex; justify-content: space-between; gap: 10px; padding: 9px 2px; border-bottom: 1px solid var(--line); }
+
+    .reference {
+      margin-top: 16px;
+      border: 1px solid rgba(255,255,255,.75);
+      border-radius: 18px;
+      background: rgba(255,255,255,.72);
+    }
+    .reference summary { padding: 13px 16px; color: var(--navy); font-weight: 850; cursor: pointer; }
+    .guide-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; padding: 0 15px 15px; }
+    .guide-card { padding: 12px; border: 1px solid var(--line); border-radius: 13px; background: #fff; }
+    .guide-card strong { display: block; margin-bottom: 4px; color: var(--teal); }
+    .guide-card p { margin: 0; color: var(--muted); font-size: .86rem; }
+    .context-note { margin: 0 15px 15px; padding: 12px 14px; border-radius: 13px; color: #5d4d10; background: var(--gold-soft); }
+
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+    .hidden { display: none !important; }
+
+    .answer-booklet { display: none; }
+    body.answer-book {
+      margin: 0;
+      background: #dfe5ef;
+      font-family: "Yu Gothic", "Hiragino Sans", "Noto Sans JP", sans-serif;
+    }
+    body.answer-book .answer-booklet { display: block; }
+    .answer-page {
+      position: relative;
+      width: 297mm;
+      height: 210mm;
+      margin: 8mm auto;
+      padding: 11mm 11mm 9mm;
+      overflow: hidden;
+      color: #17223a;
+      background: #fffdf8;
+      box-shadow: 0 10px 35px rgba(24, 40, 71, .16);
+    }
+    .answer-page::before {
+      content: "";
+      position: absolute;
+      inset: 5mm;
+      border: .35mm solid #d6dce7;
+      pointer-events: none;
+    }
+    .book-header {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      height: 13mm;
+      padding: 0 2mm;
+      border-bottom: .7mm solid #f3ca52;
+    }
+    .book-header h1 { color: #1e3157; font-size: 17pt; letter-spacing: .08em; }
+    .book-header p { margin: 0; color: #65718a; font-size: 8.5pt; }
+    .answer-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      direction: rtl;
+      gap: 3mm;
+      height: 171mm;
+      padding-top: 4mm;
+    }
+    .print-entry {
+      direction: ltr;
+      min-width: 0;
+      overflow: hidden;
+      border: .35mm solid #cfd6e2;
+      border-radius: 2.6mm;
+      background: #fff;
+    }
+    .print-entry.context-answer { background: #fff9df; }
+    .entry-heading {
+      display: flex;
+      align-items: center;
+      gap: 1.5mm;
+      height: 11mm;
+      padding: 1.7mm 2.2mm;
+      color: #1e3157;
+      background: #f2f6fb;
+      border-bottom: .3mm solid #d8deea;
+      font-size: 8.2pt;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+    .entry-no {
+      display: grid;
+      place-items: center;
+      min-width: 7mm;
+      height: 7mm;
+      padding: 0 1mm;
+      border-radius: 99px;
+      color: #fff;
+      background: #1e3157;
+      font-size: 7.5pt;
+    }
+    .entry-usage { color: #157c78; }
+    .entry-pattern { overflow: hidden; color: #65718a; text-overflow: ellipsis; }
+    .entry-columns {
+      display: grid;
+      grid-template-columns: 18mm 21mm minmax(0, 1fr);
+      direction: rtl;
+      height: 152mm;
+    }
+    .entry-column {
+      direction: ltr;
+      min-width: 0;
+      overflow: hidden;
+      border-left: .25mm solid #e1e5ed;
+    }
+    .entry-column:last-child { border-left: 0; }
+    .entry-column h2 {
+      height: 8mm;
+      margin: 0;
+      padding: 1.6mm 0;
+      color: #fff;
+      background: #29446f;
+      font-size: 7.6pt;
+      text-align: center;
+      letter-spacing: .08em;
+    }
+    .entry-column.modern h2 { background: #157c78; }
+    .entry-column.kundoku h2 { background: #a94e65; }
+    .entry-column.kunten h2 { background: #1e3157; }
+    .vertical-copy {
+      height: 144mm;
+      width: 100%;
+      padding: 3mm 2.2mm;
+      writing-mode: vertical-rl;
+      text-orientation: upright;
+      overflow: hidden;
+      color: #17223a;
+      font-family: "Yu Mincho", "Hiragino Mincho ProN", "Noto Serif JP", serif;
+      font-size: 10pt;
+      line-height: 1.8;
+      letter-spacing: .025em;
+    }
+    .vertical-copy ruby { ruby-position: over; }
+    .vertical-copy rt { color: #a94e65; font-size: .46em; }
+    .print-kunten-wrap {
+      display: grid;
+      place-items: start center;
+      height: 144mm;
+      padding-top: 3mm;
+    }
+    .print-kunten-wrap .kunten-stack { font-size: 14pt; }
+    .print-kunten-wrap .kunten-cell { height: 1.43em; }
+    .print-kunten-wrap .kaeriten { color: #a94e65; }
+    .book-footer {
+      position: absolute;
+      right: 12mm;
+      bottom: 5.8mm;
+      z-index: 2;
+      color: #65718a;
+      font-size: 7.4pt;
+    }
+
+    @media (max-width: 980px) {
+      .toolbar { grid-template-columns: 1fr 1fr; }
+      .toolbar .start-box { grid-column: 1 / -1; }
+      .toolbar .start-box .primary { width: 100%; }
+      .exam-layout { grid-template-columns: 1fr; }
+      .question-sheet { order: 1; min-height: 500px; }
+      .answer-pane { order: 2; min-height: 440px; }
+      .guide-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 620px) {
+      .app { padding: 12px 10px 28px; }
+      .topbar { align-items: flex-start; }
+      .seal { width: 42px; height: 42px; flex-basis: 42px; }
+      .subtitle { display: none; }
+      .score-chip { min-width: auto; padding: 6px 10px; font-size: .82rem; }
+      .toolbar { grid-template-columns: 1fr; padding: 12px; }
+      .toolbar .start-box { grid-column: auto; }
+      .select-row { grid-template-columns: 1fr 1fr; }
+      .question-sheet { min-height: 430px; border-radius: 20px; }
+      .vertical-stage { inset: 31px 28px; }
+      .kanbun { margin: 0 11px; font-size: clamp(1.65rem, 7vw, 2.15rem); line-height: 1.6; }
+      .vertical-prompt { margin-left: 10px; font-size: .92rem; }
+      .answer-pane { padding: 24px 17px; border-radius: 20px; }
+      .answer-card { grid-template-columns: 1fr; }
+      .kunten-box { grid-template-columns: 1fr; }
+      .kunten-preview { min-height: 220px; border-top: 1px dashed #c9cfdb; border-left: 0; }
+      .keyhint { display: none; }
+      .guide-grid { grid-template-columns: 1fr; }
+    }
+
+    @media print {
+      @page { size: A4 landscape; margin: 0; }
+      body { background: #fff; }
+      .toolbar, .progress-wrap, .reference, .action-row, .score-chip { display: none !important; }
+      .app { width: 100%; padding: 0; }
+      .exam-layout { grid-template-columns: 1fr 1fr; min-height: 90vh; }
+      .answer-pane, .question-sheet { box-shadow: none; border: 1px solid #777; }
+      body.answer-book { background: #fff; }
+      body.answer-book .answer-page {
+        margin: 0;
+        box-shadow: none;
+        break-after: page;
+        page-break-after: always;
+      }
+      body.answer-book .answer-page:last-child { break-after: auto; page-break-after: auto; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; animation: none !important; transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div class="brand">
+        <div class="seal" aria-hidden="true">漢</div>
+        <div>
+          <h1>漢文 期末対策</h1>
+          <p class="subtitle">疑問・反語（15〜19）｜白文から判断する実戦練習</p>
+        </div>
+      </div>
+      <div class="score-chip" id="scoreChip" aria-live="polite">正解 0 ／ 0</div>
+    </header>
+
+    <section class="toolbar" aria-label="出題設定">
+      <div>
+        <span class="control-label">出題範囲</span>
+        <div class="unit-pills" id="unitPills">
+          <label class="unit-pill"><input type="checkbox" value="15" checked><span>15 基本</span></label>
+          <label class="unit-pill"><input type="checkbox" value="16" checked><span>16 安・誰</span></label>
+          <label class="unit-pill"><input type="checkbox" value="17" checked><span>17 如何</span></label>
+          <label class="unit-pill"><input type="checkbox" value="18" checked><span>18 選択</span></label>
+          <label class="unit-pill"><input type="checkbox" value="19" checked><span>19 豈・独</span></label>
+        </div>
+      </div>
+      <div>
+        <span class="control-label">練習メニュー</span>
+        <div class="select-row">
+          <label><span class="sr-only">問題形式</span><select id="modeSelect">
+            <option value="mix">本番ミックス</option>
+            <option value="kundoku">書き下し文</option>
+            <option value="translation">口語訳</option>
+            <option value="usage">疑問・反語の判定</option>
+            <option value="reading">重要語の読み</option>
+          </select></label>
+          <label><span class="sr-only">問題数</span><select id="countSelect">
+            <option value="10">10問</option>
+            <option value="20" selected>20問</option>
+            <option value="30">30問</option>
+            <option value="all">全問</option>
+          </select></label>
+        </div>
+      </div>
+      <div class="start-box"><span class="control-label">新しいセット</span><button class="primary" id="startButton">問題を作り直す</button></div>
+    </section>
+
+    <div class="progress-wrap" aria-label="進み具合">
+      <span id="progressText">1 / 20</span>
+      <div class="progress-track"><div class="progress-bar" id="progressBar"></div></div>
+      <span id="unitText">第15回</span>
+    </div>
+
+    <section class="exam-layout" id="examLayout">
+      <article class="answer-pane" id="answerPane" aria-live="polite"></article>
+      <article class="question-sheet" aria-label="問題文">
+        <div class="paper-stamp" aria-hidden="true">期末<br>対策</div>
+        <div class="vertical-stage" id="questionStage"></div>
+      </article>
+    </section>
+
+    <details class="reference">
+      <summary>試験前の句形ミニ整理</summary>
+      <div class="guide-grid">
+        <div class="guide-card"><strong>15｜基本形</strong><p>「何・奚」「乎・哉・邪・与」。語尾だけでなく、文脈から疑問か反語かを決める。</p></div>
+        <div class="guide-card"><strong>16｜安・焉・誰・孰</strong><p>安・焉は「いづくんぞ／いづくにか」。誰・孰は「たれか」。</p></div>
+        <div class="guide-card"><strong>17｜如何・奈何</strong><p>「いかん」「いかんせん」。何＋名詞、幾何、何〜之有も確認。</p></div>
+        <div class="guide-card"><strong>18｜選択疑問</strong><p>何如・何若・孰・否・未。「どちらか」「〜かどうか」を問う。</p></div>
+        <div class="guide-card"><strong>19｜強い反語</strong><p>豈・独・肯・敢。「どうして〜か、いや〜ない」と逆の内容を強く示す。</p></div>
+      </div>
+      <p class="context-note"><strong>判定のコツ：</strong>後ろに「対へて曰はく〜」と返答が続けば、実際に答えを求める疑問の可能性が高い。同じ白文でも、前後の文脈に合わせて読み方と訳し方を変える。</p>
+    </details>
+  </main>
+
+  <script>
+    "use strict";
+
+    const Q = (id, unit, text, kundoku, modern, usage, pattern, note, target, reading, context = "") => ({
+      id, unit: String(unit), text, kundoku, modern, usage, pattern, note, target, reading, context
+    });
+
+    const questions = [
+      Q("15-01",15,"魯孔丘与","魯の孔丘か。","魯の国の孔丘か。","疑問","与（か）","文末の「与」は疑問を表し、「か」と読む。","与","か"),
+      Q("15-02",15,"其真無馬邪","其れ真に馬無きか。","それは本当に名馬がいないのだろうか。","疑問","邪（か）","「邪」は疑問の終助詞。ここでは真偽をたずねる形。","邪","か"),
+      Q("15-03",15,"若非吾故人乎","若は吾が故人に非ずや。","おまえは私の昔なじみではないか。","反語","〜に非ずや","否定形＋「乎」を「〜ではないか」と反語に読む。","乎","や"),
+      Q("15-04",15,"可謂孝乎","孝と謂ふべけんや。","孝行と言えるだろうか、いや、言えない。","反語","豈に〜んやの意","「可〜乎」を文脈に合わせて「〜べけんや」と反語にする。","乎","や"),
+      Q("15-05",15,"何恭也","何ぞ恭しきや。","なんと礼儀正しいことか。","詠嘆","何ぞ〜や","疑問ではなく、程度の強さに感動する詠嘆。","何","なんぞ"),
+      Q("15-06",15,"吾何愛一牛","吾何ぞ一牛を愛しまん。","私がどうして牛一頭を惜しもうか、いや、惜しまない。","反語","何ぞ〜ん","「愛」はここでは「惜しむ」。結びを「〜ん」として反語に読む。","何","なんぞ"),
+      Q("15-07",15,"何患無兄弟也","何ぞ兄弟無きを患へんや。","どうして兄弟がいないことを嘆こうか、いや、嘆かない。","反語","何ぞ〜んや","「患ふ」は心配する・嘆くの意。","何","なんぞ"),
+      Q("15-08",15,"何独不懼","何ぞ独り懼れざる。","どうして一人だけ恐れなかったのか。","疑問","何ぞ〜ざる","答えを求める疑問なので、反語の「〜んや」にしない。","何","なんぞ"),
+      Q("15-09",15,"吾何畏彼哉","吾何ぞ彼を畏れんや。","私がどうして彼を恐れようか、いや、恐れない。","反語","何ぞ〜んや","反語では、疑問の形で反対内容を強く示す。","何","なんぞ"),
+      Q("15-10",15,"子奚不為政","子奚ぞ政を為さざる。","あなたはどうして政治を行わないのか。","疑問","奚ぞ〜ざる","「奚」は理由をたずねる疑問詞で「なんぞ」。","奚","なんぞ"),
+      Q("15-11",15,"可謂仁乎","仁と謂ふべけんや。","仁と言えるだろうか、いや、言えない。","反語","可〜乎","「可」は可能・許可を表すが、ここでは「〜と言えるか」と反語になる。","乎","や"),
+      Q("15-12",15,"何肥也","何ぞ肥えたるや。","どうしてそんなに太ったのか。","疑問","何ぞ〜や","直後に答えがあるため、実際に理由を聞く疑問と判断する。","何","なんぞ","【直後の文】対曰「戦勝故肥」"),
+      Q("15-13",15,"帝力何有於我哉","帝力何ぞ我に有らんや。","天子の力がどうして私に及んでいようか、いや、及んでいない。","反語","何ぞ〜んや","話し手は天子の力を否定しており、答えを求めてはいない。","何","なんぞ"),
+
+      Q("16-01",16,"君安与項伯有故","君安くんぞ項伯と故有る。","あなたはどうして項伯と昔からの付き合いがあるのか。","疑問","安くんぞ","理由をたずねる「安」は「いづくんぞ」と読む。","安","いづくんぞ"),
+      Q("16-02",16,"燕雀安知鴻鵠之志哉","燕雀安くんぞ鴻鵠の志を知らんや。","小人物に、どうして大人物の志が分かろうか、いや、分からない。","反語","安くんぞ〜んや","燕雀を小人物、鴻鵠を大人物にたとえた反語。","安","いづくんぞ"),
+      Q("16-03",16,"割鶏焉用牛刀","鶏を割くに焉んぞ牛刀を用ゐんや。","鶏をさばくのにどうして牛を切る大包丁を使おうか、いや、使わない。","反語","焉んぞ〜んや","小事に大げさな手段は不要、という意味を反語で表す。","焉","いづくんぞ"),
+      Q("16-04",16,"子将安之","子将に安くにか之かんとす。","あなたは今にもどこへ行こうとしているのか。","疑問","安くにか","「之く」は行く。「安」は場所を問うので「いづくにか」。","安","いづくにか"),
+      Q("16-05",16,"人非聖人誰無過","人は聖人に非ず、誰か過ち無からん。","人は聖人ではない。誰に過ちがないだろうか、いや、誰にでもある。","反語","誰か〜ん","「誰か〜ん」は「誰が〜だろうか、いや誰も〜ない」の反語。","誰","たれか"),
+      Q("16-06",16,"何以殺人","何を以て人を殺せる。","何を使って人を殺したのか。","疑問","何を以て","「何以」は手段を問う「何をもって」。","何","なに"),
+      Q("16-07",16,"子安知之","子安くんぞ之を知る。","あなたはどうしてそれを知っているのか。","疑問","安くんぞ〜る","答えを求める文脈なら、結びは現在形の「知る」。","安","いづくんぞ","【場面】知ったきっかけを、相手に答えてもらう。"),
+      Q("16-08",16,"子安知之","子安くんぞ之を知らん。","あなたにどうしてそれが分かろうか、いや、分からない。","反語","安くんぞ〜ん","反語の文脈なら、結びを「知らん」として逆の内容を示す。","安","いづくんぞ","【場面】相手に分かるはずがない、と話し手は考えている。"),
+      Q("16-09",16,"沛公安在","沛公安くにか在る。","沛公はどこにいるのか。","疑問","安くにか","場所を問う「安」は「いづくにか」。","安","いづくにか"),
+      Q("16-10",16,"自古誰無死","古より誰か死無からん。","昔から、誰が死なずにいられようか、いや、誰も死を免れない。","反語","誰か〜ん","「無からん」で、誰にも例外がないことを強く示す。","誰","たれか"),
+      Q("16-11",16,"孰為好学","孰か学を好むと為す。","誰を学問を好む者とするのか。","疑問","孰か","人について「だれか」と問う「孰」。","孰","たれか"),
+      Q("16-12",16,"可謂孝乎","孝と謂ふべけんや。","孝行と言えるだろうか、いや、言えない。","反語","可〜乎","第15回にも出る重要な反語。文末の「乎」と文脈から「〜べけんや」と読む。","乎","や"),
+
+      Q("17-01",17,"何憂何懼","何をか憂へ何をか懼れん。","何を心配し、何を恐れることがあろうか、いや、何もない。","反語","何をか〜ん","疑問詞を目的語として前に出し、「何をか」と読む。","何","なにをか"),
+      Q("17-02",17,"何意棲碧山","何の意ありてか碧山に棲む。","どのような考えがあって碧山に住むのか。","疑問","何の＋名詞","「何意」は「何の意ありてか」と理由・意図をたずねる。","何","なんの"),
+      Q("17-03",17,"何日是帰年","何れの日か是れ帰年ならん。","いったいいつになれば帰る年となるのだろうか。","疑問","何れの＋名詞か","「何日」は「いつの日」と時を問う。","何","いづれの"),
+      Q("17-04",17,"何利之有","何の利か之れ有らん。","どんな利益があろうか、いや、何の利益もない。","反語","何の〜か之れ有らん","疑問語を前に出す「何〜之有」の形。","何","なんの"),
+      Q("17-05",17,"諸侯不従奈何","諸侯の従はざるは奈何せん。","諸侯が従わない場合は、どうしたらよいか。","疑問","奈何せん","処置・方法を問う「どうしようか」。","奈何","いかんせん"),
+      Q("17-06",17,"如何不涙垂","如何ぞ涙垂れざらん。","どうして涙を流さずにいられようか、いや、いられない。","反語","如何ぞ〜ざらん","「如何ぞ」を「どうして」と読み、反語の「ざらん」で結ぶ。","如何","いかんぞ"),
+      Q("17-07",17,"何謂浩然之気","何をか浩然の気と謂ふ。","何を浩然の気というのか。","疑問","何をか〜と謂ふ","定義をたずねる形。「浩然の気」は広く大きく、道義に基づく気。","何","なにをか"),
+      Q("17-08",17,"壮士行何畏","壮士行くに何をか畏れん。","壮士が進むのに、何を恐れることがあろうか、いや、何も恐れない。","反語","何をか〜ん","目的語の「何」を前に出し、結びの「ん」で反語にする。","何","なにをか"),
+      Q("17-09",17,"朋友之際如何","朋友の際は如何。","友人どうしの交際はどのようであるか。","疑問","如何","状態・様子を問う「どのようであるか」。","如何","いかん"),
+      Q("17-10",17,"虞兮奈若何","虞や虞や若を奈何せん。","虞よ、虞よ、おまえをどうしたらよいのか。","疑問","奈〜何","「奈若何」で「おまえをどうしようか」。どうにもできない嘆きもこもる。","奈若何","なんぢをいかんせん"),
+      Q("17-11",17,"人生幾何","人生幾何ぞ。","人の一生はどれほどの長さか。","疑問","幾何ぞ","数量・程度を問う「いくばく」。","幾何","いくばくぞ"),
+      Q("17-12",17,"為歓幾何","歓を為すこと幾何ぞ。","楽しく過ごせる時間はどれほどあるだろうか。","疑問","幾何ぞ","「幾何」は数量・時間の長さを問う。","幾何","いくばくぞ"),
+      Q("17-13",17,"不索何獲","索めずんば何をか獲ん。","求めなければ、何を得ることができようか、いや、何も得られない。","反語","何をか〜ん","「索む」は求める。否定の条件「〜ずんば」と反語の結びに注意。","何","なにをか"),
+      Q("17-14",17,"何難之有焉","何の難きことか之れ有らん。","どんな難しいことがあろうか、いや、何もない。","反語","何〜之有","「何〜之有」は「どんな〜があるか、いや、ない」。","何","なんの"),
+      Q("17-15",17,"如此良夜何","此の良夜を如何せん。","このすばらしい夜を、どう過ごしたらよいのか。","疑問","〜を如何せん","対象をどう扱うか・どう過ごすかを問う。","何","いかんせん"),
+      Q("17-16",17,"桓魋其如予何","桓魋其れ予を如何せん。","桓魋が私をどうすることができようか、いや、何もできない。","反語","〜を如何せん","孔子が、相手には自分をどうすることもできない、と強く言う反語。","如予何","われをいかんせん"),
+
+      Q("18-01",18,"与長者期後何也","長者と期して後るるは何ぞや。","目上の人と約束して遅れるとは、どういうことか。","疑問","何ぞや","理由・意味を問う「何ぞや」。","何","なんぞや"),
+      Q("18-02",18,"顔淵之為人何若","顔淵の人と為りは何若。","顔淵の人柄はどのようであるか。","疑問","何若","人物の性質・状態を問う「いかん」。","何若","いかん"),
+      Q("18-03",18,"以子之矛陥子之楯何如","子の矛を以て子の楯を陥さば何如。","あなたの矛であなたの楯を突き通したら、どうなるか。","疑問","何如","結果・様子を問う「いかん」。「陥す」は「とほす」と読む。","何如","いかん"),
+      Q("18-04",18,"礼与食孰重","礼と食とは孰れか重き。","礼と食べ物では、どちらが大切か。","疑問","AとBと孰れか","二つを比べて「どちらが〜か」と選ばせる。","孰","いづれか"),
+      Q("18-05",18,"如此則動心否","此くの如くなれば則ち心を動かすや否や。","このような場合なら、心を動揺させるか、させないか。","疑問","〜や否や","肯定・否定のどちらかを問う選択疑問。","否","いなや"),
+      Q("18-06",18,"不読書何也","書を読まざるは何ぞや。","書物を読まないのは、どうしてか。","疑問","何ぞや","理由を問う。反語なら「〜んや」の結びになることが多い。","何","なんぞや"),
+      Q("18-07",18,"以五十歩笑百歩則何如","五十歩を以て百歩を笑はば、則ち何如。","五十歩逃げた者が百歩逃げた者を笑うなら、どうであるか。","疑問","何如","相手に判断を求める「どうか」。","何如","いかん"),
+      Q("18-08",18,"汝与回孰愈","汝と回とは孰れか愈れる。","おまえと顔回では、どちらが優れているか。","疑問","AとBと孰れか","比較の対象を並べ、「孰れか」で選択を求める。","孰","いづれか"),
+      Q("18-09",18,"視吾舌尚在否","吾が舌を視よ、尚ほ在りや否や。","私の舌を見よ。まだあるか、ないか。","疑問","〜や否や","「否」は「いな」と読み、肯定か否定かをたずねる。","否","いなや"),
+      Q("18-10",18,"寒梅開花未","寒梅花を開くや未だしや。","寒梅はもう花を咲かせたか、まだ咲かせていないか。","疑問","〜や未だしや","「未」は「まだ〜ないか」と未完了を問う。","未","いまだしや"),
+
+      Q("19-01",19,"豈能無怪哉","豈に能く怪しむこと無からんや。","どうして不思議に思わずにいられようか、いや、不思議に思う。","反語","豈に〜んや","「豈」は強い反語を導き、「あに」と読む。","豈","あに"),
+      Q("19-02",19,"豈望報乎","豈に報いを望まんや。","どうしてお返しを望もうか、いや、望まない。","反語","豈に〜んや","反語の定番。口語訳では後半の否定まで示す。","豈","あに"),
+      Q("19-03",19,"豈不悲乎","豈に悲しからずや。","どうして悲しくないことがあろうか、いや、悲しい。","反語","豈に〜ずや","否定語を含む反語なので、口語訳の結論は肯定になる。","豈","あに"),
+      Q("19-04",19,"独得黙然而已乎","独り黙然として已むことを得んや。","どうして黙ったままでいることができようか、いや、できない。","反語","独り〜んや","「独」はここでは「ひとり〜だけか」の意から反語を導く。","独","ひとり"),
+      Q("19-05",19,"肯将衰朽惜残年","肯へて衰朽を将って残年を惜しまんや。","どうして老い衰えた身で残りの命を惜しもうか、いや、惜しまない。","反語","肯へて〜んや","「肯」は反語では「あへて」と読み、「すすんで〜しようか」の意。","肯","あへて"),
+      Q("19-06",19,"百獣之見我而敢不走乎","百獣の我を見て敢へて走らざらんや。","多くの獣が私を見て、どうして逃げずにいようか、いや、必ず逃げる。","反語","敢へて〜ざらんや","「敢〜乎」は反語なら「どうしてあえて〜しないか」。","敢","あへて"),
+      Q("19-07",19,"不敢走","敢へて走らず。","進んで走ろうとはしない。","通常の否定","不敢〜","「不敢」は「あえて〜しない」という通常の否定。文末の疑問語がなく、反語ではない。","敢","あへて")
+    ];
+
+    // 読み上げは、ブラウザに漢字の読みを推測させず、全問に指定した「音声用かな」を使う。
+    // ruby: 書き下し文に表示する振り仮名。kunten: { } 内がレ点・一二点。
+    const learningAids = {
+      "15-01": { ruby:"魯{ろ}の孔丘{こうきゅう}か。", speech:"ろの こうきゅうか。", kunten:"魯孔丘与" },
+      "15-02": { ruby:"其{そ}れ真{まこと}に馬{うま}無{な}きか。", speech:"それ まことに うま なきか。", kunten:"其真無{レ}馬邪" },
+      "15-03": { ruby:"若{なんじ}は吾{わ}が故人{こじん}に非{あら}ずや。", speech:"なんじは わが こじんに あらずや。", kunten:"若非{二}吾故人{一}乎" },
+      "15-04": { ruby:"孝{こう}と謂{い}ふべけんや。", speech:"こうと いうべけんや。", kunten:"可{レ}謂{二}孝{一}乎" },
+      "15-05": { ruby:"何{なん}ぞ恭{うやうや}しきや。", speech:"なんぞ うやうやしきや。", kunten:"何恭也" },
+      "15-06": { ruby:"吾{われ}何{なん}ぞ一牛{いちぎゅう}を愛{お}しまん。", speech:"われ なんぞ いちぎゅうを おしまん。", kunten:"吾何愛{二}一牛{一}" },
+      "15-07": { ruby:"何{なん}ぞ兄弟{けいてい}無{な}きを患{うれ}へんや。", speech:"なんぞ けいてい なきを うれえんや。", kunten:"何患{二}無{レ}兄弟{一}也" },
+      "15-08": { ruby:"何{なん}ぞ独{ひと}り懼{おそ}れざる。", speech:"なんぞ ひとり おそれざる。", kunten:"何独不{レ}懼" },
+      "15-09": { ruby:"吾{われ}何{なん}ぞ彼{かれ}を畏{おそ}れんや。", speech:"われ なんぞ かれを おそれんや。", kunten:"吾何畏{レ}彼哉" },
+      "15-10": { ruby:"子{し}奚{なん}ぞ政{まつりごと}を為{な}さざる。", speech:"し なんぞ まつりごとを なさざる。", kunten:"子奚不{レ}為{レ}政" },
+      "15-11": { ruby:"仁{じん}と謂{い}ふべけんや。", speech:"じんと いうべけんや。", kunten:"可{レ}謂{二}仁{一}乎" },
+      "15-12": { ruby:"何{なん}ぞ肥{こ}えたるや。", speech:"なんぞ こえたるや。", kunten:"何肥也" },
+      "15-13": { ruby:"帝力{ていりょく}何{なん}ぞ我{われ}に有{あ}らんや。", speech:"ていりょく なんぞ われに あらんや。", kunten:"帝力何有{二}於我{一}哉" },
+
+      "16-01": { ruby:"君{きみ}安{いづ}くんぞ項伯{こうはく}と故{こ}有{あ}る。", speech:"きみ いずくんぞ こうはくと こ ある。", kunten:"君安与{二}項伯{一}有{レ}故" },
+      "16-02": { ruby:"燕雀{えんじゃく}安{いづ}くんぞ鴻鵠{こうこく}の志{こころざし}を知{し}らんや。", speech:"えんじゃく いずくんぞ こうこくの こころざしを しらんや。", kunten:"燕雀安知{二}鴻鵠之志{一}哉" },
+      "16-03": { ruby:"鶏{にわとり}を割{さ}くに焉{いづ}んぞ牛刀{ぎゅうとう}を用{もち}ゐんや。", speech:"にわとりを さくに、いずくんぞ ぎゅうとうを もちいんや。", kunten:"割{レ}鶏焉用{二}牛刀{一}" },
+      "16-04": { ruby:"子{し}将{まさ}に安{いづ}くにか之{ゆ}かんとす。", speech:"し まさに いずくにか ゆかんとす。", kunten:"子将安之" },
+      "16-05": { ruby:"人{ひと}は聖人{せいじん}に非{あら}ず、誰{たれ}か過{あやま}ち無{な}からん。", speech:"ひとは せいじんに あらず、たれか あやまち なからん。", kunten:"人非{二}聖人{一}誰無{レ}過" },
+      "16-06": { ruby:"何{なに}を以{もっ}て人{ひと}を殺{ころ}せる。", speech:"なにを もって ひとを ころせる。", kunten:"何以殺{レ}人" },
+      "16-07": { ruby:"子{し}安{いづ}くんぞ之{これ}を知{し}る。", speech:"し いずくんぞ これを しる。", kunten:"子安知{レ}之" },
+      "16-08": { ruby:"子{し}安{いづ}くんぞ之{これ}を知{し}らん。", speech:"し いずくんぞ これを しらん。", kunten:"子安知{レ}之" },
+      "16-09": { ruby:"沛公{はいこう}安{いづ}くにか在{あ}る。", speech:"はいこう いずくにか ある。", kunten:"沛公安在" },
+      "16-10": { ruby:"古{いにしへ}より誰{たれ}か死{し}無{な}からん。", speech:"いにしえより たれか し なからん。", kunten:"自{レ}古誰無{レ}死" },
+      "16-11": { ruby:"孰{たれ}か学{がく}を好{この}むと為{な}す。", speech:"たれか がくを このむと なす。", kunten:"孰為{二}好{レ}学{一}" },
+      "16-12": { ruby:"孝{こう}と謂{い}ふべけんや。", speech:"こうと いうべけんや。", kunten:"可{レ}謂{二}孝{一}乎" },
+
+      "17-01": { ruby:"何{なに}をか憂{うれ}へ何{なに}をか懼{おそ}れん。", speech:"なにをか うれえ、なにをか おそれん。", kunten:"何憂何懼" },
+      "17-02": { ruby:"何{なん}の意{い}ありてか碧山{へきざん}に棲{す}む。", speech:"なんの い ありてか、へきざんに すむ。", kunten:"何意棲{二}碧山{一}" },
+      "17-03": { ruby:"何{いづ}れの日{ひ}か是{こ}れ帰年{きねん}ならん。", speech:"いずれの ひか、これ きねん ならん。", kunten:"何日是帰年" },
+      "17-04": { ruby:"何{なん}の利{り}か之{こ}れ有{あ}らん。", speech:"なんの りか、これ あらん。", kunten:"何利之有" },
+      "17-05": { ruby:"諸侯{しょこう}の従{したが}はざるは奈何{いかん}せん。", speech:"しょこうの したがわざるは、いかんせん。", kunten:"諸侯不{レ}従奈何" },
+      "17-06": { ruby:"如何{いかん}ぞ涙{なみだ}垂{た}れざらん。", speech:"いかんぞ なみだ たれざらん。", kunten:"如何不{二}涙垂{一}" },
+      "17-07": { ruby:"何{なに}をか浩然{こうぜん}の気{き}と謂{い}ふ。", speech:"なにをか こうぜんの きと いう。", kunten:"何謂{二}浩然之気{一}" },
+      "17-08": { ruby:"壮士{そうし}行{ゆ}くに何{なに}をか畏{おそ}れん。", speech:"そうし ゆくに、なにをか おそれん。", kunten:"壮士行何畏" },
+      "17-09": { ruby:"朋友{ほうゆう}の際{さい}は如何{いかん}。", speech:"ほうゆうの さいは いかん。", kunten:"朋友之際如何" },
+      "17-10": { ruby:"虞{ぐ}や虞{ぐ}や若{なんじ}を奈何{いかん}せん。", speech:"ぐや ぐや、なんじを いかんせん。", kunten:"虞兮奈{二}若{一}何" },
+      "17-11": { ruby:"人生{じんせい}幾何{いくばく}ぞ。", speech:"じんせい いくばくぞ。", kunten:"人生幾何" },
+      "17-12": { ruby:"歓{かん}を為{な}すこと幾何{いくばく}ぞ。", speech:"かんを なすこと いくばくぞ。", kunten:"為{レ}歓幾何" },
+      "17-13": { ruby:"索{もと}めずんば何{なに}をか獲{え}ん。", speech:"もとめずんば、なにをか えん。", kunten:"不{レ}索何獲" },
+      "17-14": { ruby:"何{なん}の難{かた}きことか之{こ}れ有{あ}らん。", speech:"なんの かたき ことか、これ あらん。", kunten:"何難之有焉" },
+      "17-15": { ruby:"此{こ}の良夜{りょうや}を如何{いかん}せん。", speech:"この りょうやを いかんせん。", kunten:"如{二}此良夜{一}何" },
+      "17-16": { ruby:"桓魋{かんたい}其{そ}れ予{われ}を如何{いかん}せん。", speech:"かんたい、それ われを いかんせん。", kunten:"桓魋其如{二}予{一}何" },
+
+      "18-01": { ruby:"長者{ちょうじゃ}と期{き}して後{おく}るるは何{なん}ぞや。", speech:"ちょうじゃと きして、おくるるは なんぞや。", kunten:"与{二}長者{一}期後何也" },
+      "18-02": { ruby:"顔淵{がんえん}の人{ひと}と為{な}りは何若{いかん}。", speech:"がんえんの ひととなりは いかん。", kunten:"顔淵之為{レ}人何若" },
+      "18-03": { ruby:"子{し}の矛{ほこ}を以{もっ}て子{し}の楯{たて}を陥{とほ}さば何如{いかん}。", speech:"しの ほこを もって、しの たてを とおさば、いかん。", kunten:"以{二}子之矛{一}陥{二}子之楯{一}何如" },
+      "18-04": { ruby:"礼{れい}と食{しょく}とは孰{いづ}れか重{おも}き。", speech:"れいと しょくとは、いずれか おもき。", kunten:"礼与食孰重" },
+      "18-05": { ruby:"此{か}くの如{ごと}くなれば則{すなは}ち心{こころ}を動{うご}かすや否{いな}や。", speech:"かくの ごとくなれば、すなわち こころを うごかすや いなや。", kunten:"如{レ}此則動{レ}心否" },
+      "18-06": { ruby:"書{しょ}を読{よ}まざるは何{なん}ぞや。", speech:"しょを よまざるは なんぞや。", kunten:"不{レ}読{レ}書何也" },
+      "18-07": { ruby:"五十歩{ごじっぽ}を以{もっ}て百歩{ひゃっぽ}を笑{わら}はば、則{すなは}ち何如{いかん}。", speech:"ごじっぽを もって、ひゃっぽを わらわば、すなわち いかん。", kunten:"以{二}五十歩{一}笑{二}百歩{一}則何如" },
+      "18-08": { ruby:"汝{なんじ}と回{かい}とは孰{いづ}れか愈{まさ}れる。", speech:"なんじと かいとは、いずれか まされる。", kunten:"汝与回孰愈" },
+      "18-09": { ruby:"吾{わ}が舌{した}を視{み}よ、尚{な}ほ在{あ}りや否{いな}や。", speech:"わが したを みよ、なお ありや いなや。", kunten:"視{二}吾舌{一}尚在否" },
+      "18-10": { ruby:"寒梅{かんばい}花{はな}を開{ひら}くや未{いま}だしや。", speech:"かんばい、はなを ひらくや、いまだしや。", kunten:"寒梅開{レ}花未" },
+
+      "19-01": { ruby:"豈{あに}に能{よ}く怪{あや}しむこと無{な}からんや。", speech:"あに よく あやしむこと なからんや。", kunten:"豈能無{レ}怪哉" },
+      "19-02": { ruby:"豈{あに}に報{むく}いを望{のぞ}まんや。", speech:"あに むくいを のぞまんや。", kunten:"豈望{レ}報乎" },
+      "19-03": { ruby:"豈{あに}に悲{かな}しからずや。", speech:"あに かなしからずや。", kunten:"豈不{レ}悲乎" },
+      "19-04": { ruby:"独{ひと}り黙然{もくねん}として已{や}むことを得{え}んや。", speech:"ひとり もくねんとして、やむことを えんや。", kunten:"独得{二}黙然而已{一}乎" },
+      "19-05": { ruby:"肯{あ}へて衰朽{すいきゅう}を将{も}って残年{ざんねん}を惜{お}しまんや。", speech:"あえて すいきゅうを もって、ざんねんを おしまんや。", kunten:"肯将{二}衰朽{一}惜{二}残年{一}" },
+      "19-06": { ruby:"百獣{ひゃくじゅう}の我{われ}を見{み}て敢{あ}へて走{はし}らざらんや。", speech:"ひゃくじゅうの われを みて、あえて はしらざらんや。", kunten:"百獣之見{レ}我而敢不{レ}走乎" },
+      "19-07": { ruby:"敢{あ}へて走{はし}らず。", speech:"あえて はしらず。", kunten:"不{二}敢走{一}" }
+    };
+
+    questions.forEach(item => Object.assign(item, learningAids[item.id]));
+
+    const modeNames = {
+      mix: "本番ミックス", kundoku: "書き下し文", translation: "口語訳",
+      usage: "疑問・反語の判定", reading: "重要語の読み"
+    };
+    const readingDistractors = ["なんぞ","なにをか","いづくんぞ","いづくにか","たれか","いづれか","いかん","いかんぞ","いかんせん","いくばくぞ","あに","あへて","ひとり","や","か","いなや","いまだしや"];
+    const usageChoices = ["疑問", "反語", "詠嘆", "通常の否定"];
+
+    const state = {
+      deck: [], index: 0, results: [], currentType: "mix", revealed: false, rated: false,
+      reviewIds: []
+    };
+
+    const $ = (selector) => document.querySelector(selector);
+    const answerPane = $("#answerPane");
+    const questionStage = $("#questionStage");
+
+    function shuffle(list) {
+      const copy = [...list];
+      for (let i = copy.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [copy[i], copy[j]] = [copy[j], copy[i]];
+      }
+      return copy;
+    }
+
+    function escapeHTML(value) {
+      return String(value).replace(/[&<>'"]/g, ch => ({"&":"&amp;","<":"&lt;",">":"&gt;","'":"&#39;",'"':"&quot;"}[ch]));
+    }
+
+    function rubyHTML(spec) {
+      const source = String(spec || "");
+      const pattern = /([\u3400-\u9fff々〆ヵヶ]+)\{([^{}]+)\}/g;
+      let html = "";
+      let cursor = 0;
+      for (const match of source.matchAll(pattern)) {
+        html += escapeHTML(source.slice(cursor, match.index));
+        html += `<ruby><rb>${escapeHTML(match[1])}</rb><rt>${escapeHTML(match[2])}</rt></ruby>`;
+        cursor = match.index + match[0].length;
+      }
+      return html + escapeHTML(source.slice(cursor));
+    }
+
+    function kuntenHTML(spec, ariaText = "") {
+      const source = String(spec || "");
+      const cells = [];
+      let index = 0;
+      while (index < source.length) {
+        const char = source[index++];
+        let kaeri = "";
+        if (source[index] === "{") {
+          const close = source.indexOf("}", index + 1);
+          if (close !== -1) {
+            kaeri = source.slice(index + 1, close);
+            index = close + 1;
+          }
+        }
+        cells.push(`<span class="kunten-cell"><span class="kunten-main">${escapeHTML(char)}</span>${kaeri ? `<span class="kaeriten">${escapeHTML(kaeri)}</span>` : ""}</span>`);
+      }
+      return `<span class="kunten-stack" role="img" aria-label="${escapeHTML(ariaText || source.replace(/\{[^}]+\}/g, ""))}">${cells.join("")}</span>`;
+    }
+
+    function markedText(item, showMark) {
+      const safe = escapeHTML(item.text);
+      if (!showMark || !item.target) return safe;
+      const target = escapeHTML(item.target);
+      const at = safe.indexOf(target);
+      if (at < 0) return safe;
+      return safe.slice(0, at) + "<mark>" + target + "</mark>" + safe.slice(at + target.length);
+    }
+
+    function selectedUnits() {
+      return [...document.querySelectorAll("#unitPills input:checked")].map(el => el.value);
+    }
+
+    function chooseType(item, mode) {
+      if (mode !== "mix") return mode;
+      const roll = Math.random();
+      if (roll < .29) return "kundoku";
+      if (roll < .57) return "translation";
+      if (roll < .80) return "usage";
+      return "reading";
+    }
+
+    function startDeck(onlyReview = false) {
+      let pool;
+      if (onlyReview) {
+        const ids = new Set(state.reviewIds);
+        pool = questions.filter(q => ids.has(q.id));
+      } else {
+        const units = selectedUnits();
+        if (!units.length) {
+          window.alert("出題範囲を一つ以上選んでください。");
+          return;
+        }
+        pool = questions.filter(q => units.includes(q.unit));
+      }
+
+      const mode = $("#modeSelect").value;
+      const wanted = $("#countSelect").value;
+      const count = wanted === "all" ? pool.length : Math.min(Number(wanted), pool.length);
+      state.deck = shuffle(pool).slice(0, onlyReview ? pool.length : count).map(item => ({ item, type: chooseType(item, mode) }));
+      state.index = 0;
+      state.results = [];
+      state.revealed = false;
+      state.rated = false;
+      state.reviewIds = [];
+      renderQuestion();
+    }
+
+    function promptFor(type, item) {
+      if (type === "kundoku") return "この白文を書き下し文にしなさい。";
+      if (type === "translation") return "この白文を口語訳しなさい。";
+      if (type === "usage") return "この文の用法を選びなさい。";
+      return `傍線部「${item.target}」の読みを選びなさい。`;
+    }
+
+    function renderQuestion() {
+      if (!state.deck.length || state.index >= state.deck.length) {
+        renderResults();
+        return;
+      }
+      const { item, type } = state.deck[state.index];
+      state.currentType = type;
+      state.revealed = false;
+      state.rated = false;
+
+      const context = item.context ? `<p class="context-vertical">${escapeHTML(item.context)}</p>` : "";
+      questionStage.innerHTML = `
+        <span class="q-number">第${state.index + 1}問</span>
+        <p class="vertical-prompt">${escapeHTML(promptFor(type, item))}</p>
+        <p class="kanbun">${markedText(item, type === "reading")}</p>
+        ${context}
+        <span class="unit-label">ジャンプアップ ${item.unit}</span>`;
+
+      if (type === "usage") renderChoices(usageChoices, item.usage);
+      else if (type === "reading") {
+        const distractors = shuffle(readingDistractors.filter(x => x !== item.reading)).slice(0, 3);
+        renderChoices(shuffle([item.reading, ...distractors]), item.reading);
+      } else renderWritten(type);
+      updateProgress();
+    }
+
+    function renderWritten(type) {
+      const label = type === "kundoku" ? "書き下し文を書く" : "口語訳を書く";
+      const placeholder = type === "kundoku"
+        ? "歴史的仮名遣い・送り仮名・結びに注意して入力…"
+        : "反語なら「〜か、いや…」まで含めて入力…";
+      answerPane.innerHTML = `
+        <p class="eyebrow">ANSWER AREA</p>
+        <h2>${label}</h2>
+        <p class="instruction">まず自分の答えを作ってから、模範解答と比べましょう。</p>
+        <label><span class="sr-only">${label}</span><textarea id="writtenAnswer" placeholder="${placeholder}" autocomplete="off"></textarea></label>
+        <div class="action-row">
+          <button class="secondary" id="revealButton">答え合わせ</button>
+          <button class="ghost" id="speakButton" title="書き下し文を読み上げる">読み上げ</button>
+          <span class="keyhint">Ctrl / ⌘ ＋ Enter で答え合わせ</span>
+        </div>
+        <div id="explanationSlot"></div>`;
+      $("#revealButton").addEventListener("click", () => revealWritten());
+      $("#speakButton").addEventListener("click", speakKundoku);
+      $("#writtenAnswer").addEventListener("keydown", event => {
+        if ((event.ctrlKey || event.metaKey) && event.key === "Enter") revealWritten();
+      });
+      $("#writtenAnswer").focus();
+    }
+
+    function renderChoices(choices, correct) {
+      answerPane.innerHTML = `
+        <p class="eyebrow">ANSWER AREA</p>
+        <h2>一つ選ぶ</h2>
+        <p class="instruction">文末の形だけで決めず、文全体の意味を考えましょう。</p>
+        <div class="choice-grid" id="choiceGrid">
+          ${choices.map((choice, i) => `<button class="choice" data-value="${escapeHTML(choice)}"><span aria-hidden="true">${String.fromCharCode(65+i)}.</span> ${escapeHTML(choice)}</button>`).join("")}
+        </div>
+        <div class="action-row">
+          <button class="ghost" id="speakButton">読み上げ</button>
+        </div>
+        <div id="explanationSlot"></div>`;
+      document.querySelectorAll(".choice").forEach(button => button.addEventListener("click", () => {
+        if (state.revealed) return;
+        state.revealed = true;
+        const selected = button.dataset.value;
+        const isCorrect = selected === correct;
+        document.querySelectorAll(".choice").forEach(btn => {
+          btn.disabled = true;
+          if (btn.dataset.value === correct) btn.classList.add("correct");
+          else if (btn === button) btn.classList.add("incorrect");
+        });
+        recordResult(isCorrect ? "correct" : "wrong");
+        showExplanation(isCorrect ? "正解です。句形と訳まで声に出して確認しましょう。" : `正解は「${correct}」です。結びと文脈を確認しましょう。`, isCorrect);
+      }));
+      $("#speakButton").addEventListener("click", speakKundoku);
+    }
+
+    function revealWritten() {
+      if (state.revealed) return;
+      state.revealed = true;
+      $("#revealButton").disabled = true;
+      showExplanation("自分の答えと模範解答を比べて、近いボタンを選んでください。", null, true);
+    }
+
+    function explanationHTML(item, bannerText, good, selfRate = false) {
+      const bannerClass = good === false ? "retry" : "good";
+      const hasKaeriten = /\{[^}]+\}/.test(item.kunten);
+      return `
+        <section class="explanation">
+          <p class="judge-banner ${bannerClass}">${escapeHTML(bannerText)}</p>
+          <div class="kunten-box">
+            <div>
+              <h3>返り点つき白文</h3>
+              <p class="kunten-help">小さな赤字が、レ点・一二点です。下から戻って読む位置を確認しましょう。</p>
+              <span class="kunten-badge">${hasKaeriten ? "返り点を確認" : "この文は返り点なし"}</span>
+            </div>
+            <div class="kunten-preview">${kuntenHTML(item.kunten, `返り点つき白文：${item.text}`)}</div>
+          </div>
+          <div class="answer-card">
+            <div class="answer-box"><h3>書き下し文（振り仮名つき）</h3><p class="kundoku-ruby" aria-label="${escapeHTML(item.kundoku)}">${rubyHTML(item.ruby)}</p></div>
+            <div class="answer-box"><h3>口語訳</h3><p>${escapeHTML(item.modern)}</p></div>
+          </div>
+          <div class="point-box">
+            <h3><span class="pattern-tag">${escapeHTML(item.usage)}</span>${escapeHTML(item.pattern)}</h3>
+            <p>${escapeHTML(item.note)}</p>
+          </div>
+          ${selfRate ? `<div class="rate-wrap"><p>自己採点</p><div class="rate-buttons">
+            <button class="rate-button" data-rate="correct">○ できた</button>
+            <button class="rate-button" data-rate="close">△ 惜しい</button>
+            <button class="rate-button" data-rate="wrong">× 要復習</button>
+          </div></div>` : ""}
+          <div class="action-row">
+            <button class="primary" id="nextButton" ${selfRate ? "disabled" : ""}>${state.index + 1 === state.deck.length ? "結果を見る" : "次の問題"}</button>
+            <button class="ghost" id="speakAnswerButton">書き下し文を聞く</button>
+            <span class="keyhint">Enter で次へ</span>
+          </div>
+        </section>`;
+    }
+
+    function showExplanation(bannerText, good, selfRate = false) {
+      const item = state.deck[state.index].item;
+      $("#explanationSlot").innerHTML = explanationHTML(item, bannerText, good, selfRate);
+      if (selfRate) {
+        document.querySelectorAll(".rate-button").forEach(button => button.addEventListener("click", () => {
+          if (state.rated) return;
+          state.rated = true;
+          document.querySelectorAll(".rate-button").forEach(btn => btn.disabled = true);
+          button.disabled = false;
+          button.style.boxShadow = "inset 0 0 0 2px currentColor";
+          recordResult(button.dataset.rate);
+          $("#nextButton").disabled = false;
+        }));
+      }
+      $("#nextButton").addEventListener("click", nextQuestion);
+      $("#speakAnswerButton").addEventListener("click", speakKundoku);
+      $("#nextButton").focus({preventScroll: true});
+      $("#explanationSlot").scrollIntoView({behavior: "smooth", block: "nearest"});
+    }
+
+    function recordResult(rate) {
+      const item = state.deck[state.index].item;
+      state.results.push({ id: item.id, rate, item });
+      if (rate !== "correct" && !state.reviewIds.includes(item.id)) state.reviewIds.push(item.id);
+      updateScore();
+    }
+
+    function nextQuestion() {
+      if (!state.revealed) return;
+      if ((state.currentType === "kundoku" || state.currentType === "translation") && !state.rated) return;
+      state.index += 1;
+      renderQuestion();
+      window.scrollTo({top: 0, behavior: "smooth"});
+    }
+
+    function updateScore() {
+      const correct = state.results.filter(r => r.rate === "correct").length;
+      $("#scoreChip").textContent = `正解 ${correct} ／ ${state.results.length}`;
+    }
+
+    function updateProgress() {
+      const total = state.deck.length || 1;
+      const current = Math.min(state.index + 1, total);
+      $("#progressText").textContent = `${current} / ${total}`;
+      $("#progressBar").style.width = `${((state.index) / total) * 100}%`;
+      $("#unitText").textContent = state.deck[state.index] ? `第${state.deck[state.index].item.unit}回` : "完了";
+      updateScore();
+    }
+
+    function speakKundoku() {
+      if (!("speechSynthesis" in window) || !state.deck[state.index]) {
+        window.alert("このブラウザでは読み上げ機能を利用できません。");
+        return;
+      }
+      window.speechSynthesis.cancel();
+      const item = state.deck[state.index].item;
+      const utterance = new SpeechSynthesisUtterance(item.speech || item.kundoku);
+      utterance.lang = "ja-JP";
+      utterance.rate = .78;
+      const japaneseVoices = window.speechSynthesis.getVoices().filter(voice => voice.lang.toLowerCase().startsWith("ja"));
+      utterance.voice = japaneseVoices.find(voice => /Google.*日本語|Kyoko|Otoya|Nanami/i.test(voice.name)) || japaneseVoices[0] || null;
+      window.speechSynthesis.speak(utterance);
+    }
+
+    function renderAnswerBook() {
+      const unitTitles = {
+        "15": "第15回　疑問・反語（1）",
+        "16": "第16回　疑問・反語（2）",
+        "17": "第17回　疑問・反語（3）",
+        "18": "第18回　疑問・反語（4）",
+        "19": "第19回　疑問・反語（5）"
+      };
+      const pageSets = [];
+      for (const unit of ["15", "16", "17", "18", "19"]) {
+        const unitItems = questions.filter(item => item.unit === unit);
+        for (let start = 0; start < unitItems.length; start += 4) {
+          pageSets.push({ unit, pageInUnit: Math.floor(start / 4) + 1, pagesInUnit: Math.ceil(unitItems.length / 4), start, items: unitItems.slice(start, start + 4) });
+        }
+      }
+
+      const pages = pageSets.map((page, pageIndex) => {
+        const cards = page.items.map((item, cardIndex) => {
+          const unitIndex = page.start + cardIndex + 1;
+          const displayNo = item.unit === "15" && unitIndex > 11 ? `判定${unitIndex - 11}` : unitIndex;
+          const contextAnswer = item.unit === "15" && unitIndex > 11;
+          return `<article class="print-entry ${contextAnswer ? "context-answer" : ""}">
+            <div class="entry-heading">
+              <span class="entry-no">${escapeHTML(displayNo)}</span>
+              <span class="entry-usage">${escapeHTML(item.usage)}</span>
+              <span class="entry-pattern">${escapeHTML(item.pattern)}</span>
+            </div>
+            <div class="entry-columns">
+              <section class="entry-column kunten"><h2>返り点つき白文</h2><div class="print-kunten-wrap">${kuntenHTML(item.kunten, `返り点つき白文：${item.text}`)}</div></section>
+              <section class="entry-column kundoku"><h2>書き下し文</h2><div class="vertical-copy">${rubyHTML(item.ruby)}</div></section>
+              <section class="entry-column modern"><h2>口語訳</h2><div class="vertical-copy">${escapeHTML(item.modern)}</div></section>
+            </div>
+          </article>`;
+        }).join("");
+        return `<section class="answer-page">
+          <header class="book-header"><h1>${unitTitles[page.unit]}</h1><p>プリント掲載順（右から左）｜${page.pageInUnit} / ${page.pagesInUnit}</p></header>
+          <div class="answer-grid">${cards}</div>
+          <footer class="book-footer">書き下し文は振り仮名つき　｜　返り点：レ点・一二点　｜　${pageIndex + 1} / ${pageSets.length}</footer>
+        </section>`;
+      }).join("");
+
+      document.body.className = "answer-book";
+      document.body.innerHTML = `<main class="answer-booklet">${pages}</main>`;
+      document.title = "漢文 期末対策｜縦書き・返り点つき答え";
+    }
+
+    function renderResults() {
+      const total = state.results.length;
+      const correct = state.results.filter(r => r.rate === "correct").length;
+      const close = state.results.filter(r => r.rate === "close").length;
+      const percent = total ? Math.round(correct / total * 100) : 0;
+      const message = percent >= 90 ? "仕上がっています。最後に要復習だけ確認しましょう。"
+        : percent >= 70 ? "あと一歩です。△と×を解き直すと安定します。"
+        : "伸びしろ十分。句形を見てから、要復習だけもう一周しましょう。";
+      const reviewItems = state.reviewIds.map(id => questions.find(q => q.id === id)).filter(Boolean);
+
+      questionStage.innerHTML = `<span class="q-number">完了</span><p class="kanbun">温故知新</p><p class="vertical-prompt">間違ひたるを復習せよ。</p><span class="unit-label">疑問・反語 15〜19</span>`;
+      answerPane.innerHTML = `<div class="result-state">
+        <p class="eyebrow">RESULT</p>
+        <div class="result-score">${percent}<small style="font-size:.36em">点</small></div>
+        <h2>${correct}問正解${close ? `・△${close}問` : ""}</h2>
+        <p class="result-message">${message}</p>
+        <div class="result-actions">
+          <button class="primary" id="retryButton" ${reviewItems.length ? "" : "disabled"}>要復習だけ解く（${reviewItems.length}）</button>
+          <button class="secondary" id="newButton">新しい問題</button>
+          <button class="ghost" id="copyButton">結果をコピー</button>
+        </div>
+        ${reviewItems.length ? `<ul class="review-list">${reviewItems.map(q => `<li><span>${escapeHTML(q.text)}</span><small>第${q.unit}回・${escapeHTML(q.pattern)}</small></li>`).join("")}</ul>` : ""}
+      </div>`;
+      $("#progressText").textContent = `${total} / ${total}`;
+      $("#progressBar").style.width = "100%";
+      $("#unitText").textContent = "完了";
+      $("#retryButton").addEventListener("click", () => startDeck(true));
+      $("#newButton").addEventListener("click", () => startDeck(false));
+      $("#copyButton").addEventListener("click", async () => {
+        const text = `漢文 期末対策（${modeNames[$("#modeSelect").value]}）\n${correct}/${total}問正解・${percent}点\n要復習：${reviewItems.map(q => q.text).join("、") || "なし"}`;
+        try {
+          await navigator.clipboard.writeText(text);
+          $("#copyButton").textContent = "コピーしました";
+        } catch {
+          window.prompt("結果をコピーしてください", text);
+        }
+      });
+    }
+
+    const answerBookMode = new URLSearchParams(window.location.search).get("answers") === "1";
+    if (answerBookMode) {
+      renderAnswerBook();
+    } else {
+      document.addEventListener("keydown", event => {
+        if (event.key === "Enter" && !event.ctrlKey && !event.metaKey && state.revealed) {
+          const active = document.activeElement;
+          if (active && active.tagName === "TEXTAREA") return;
+          const next = $("#nextButton");
+          if (next && !next.disabled) nextQuestion();
+        }
+      });
+
+      $("#startButton").addEventListener("click", () => startDeck(false));
+      startDeck(false);
+    }
+  </script>
+</body>
+</html>
